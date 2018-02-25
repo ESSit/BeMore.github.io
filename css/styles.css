@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+
 
 body, html {
   margin: 0;
@@ -19,29 +17,36 @@ body, html {
   Header stylesheet
 */
 
-.header_content {
-  position: relative;
-  height: auto;
+.header {
+  width: inherit;
 }
-.header_logo_img {
-  width: 70px;
+.header-content {
+  width: inherit;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.header-logo-img {
+  width: 4em;
+  height: 100%;
   margin: 0.5em;
   margin-top: 2em;
   margin-right: 0.5em;
 }
-.header_logo_text_block {
-  display: inline-block;
-  float: right;
+.header-logo-text-block {
   margin-right: 0.5em;
   color: #2d3c49;
 }
-.header_logo_text {
-  float: right;
+.header-logo-text {
   margin: 0;
+  font-size: 1em;
+  font-weight: 100;
 }
-.header_logo_caption {
+.header-logo-caption {
   margin-bottom: 0;
+  margin-top: 1em;
   font-size: 2.3em;
+  font-weight: 100;
 }
 .line {
   height: 0.2em;
@@ -53,43 +58,45 @@ body, html {
   Main image stylesheet
 */
 
-picture, .main_image {
+picture, .main-image {
   width: inherit;
 }
 
 /*
   My projects stylesheet
 */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-.my_projects_text {
+.my-projects-text {
   text-transform: none;
   margin-left: 0.5em;
   font-size: 1.5em;
   color: #7d97ad;
 }
-.project_box {
+.project-box {
   width: calc((100% - 1em)/3);
   overflow: hidden;
   text-overflow: ellipsis;
-  float: left;
   margin-bottom: 1em;
   white-space: nowrap;
 }
-.project_img {
+.project-img {
   max-width: 100%;
-  display: block;
   overflow-y: hidden;
 
 }
-.project_text {
+.project-text {
   text-align: center;
   color: #2d3c49;
 }
-.project_link {
+.project-link {
   text-transform: none;
   margin-left: 1em;
 }
-.project_ATC, .project_skydive_logbook{
+.project-ATC, .project-skydive-logbook{
   margin-right: 0.5em;
 }
 
@@ -97,10 +104,10 @@ picture, .main_image {
   social links
 */
 
-.social_links {
+.social-links {
   margin-left: auto;
   margin-right: auto;
-  width: 10.5em;
+  width: 11em;
   margin-bottom: 0.5em;
 }
 
@@ -109,29 +116,35 @@ picture, .main_image {
 */
 
 @media screen and (max-width: 500px) {
-  .project_skydive_logbook {
+  .project-skydive-logbook {
     margin-right: 0;
   }
-  .project_box {
+  .project-box {
     width: calc((100% - 0.5em)/2);
 }
 @media screen and (max-width: 400px) {
-  .header_logo_img {
-    display: none;
+  .header-logo-img {
+    width: 9%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
-  .header_logo_caption {
-      margin-top: 0.5em;
+  .header-logo-text-block {
+    width: 80%;
+  }
+  .header-logo-caption {
+    margin-top: 0.5em;
+    font-size: 2.2em;
   }
 }
 @media screen and (max-width: 320px) {
-  .project_skydive_logbook, .project_ATC {
+  .project-skydive-logbook, .project-ATC {
     margin-right: 0;
   }
-  .project_box {
+  .project-box {
     width: 100%;
     margin-bottom: 2em;
   }
-  .header_logo_caption {
+  .header-logo-caption {
     margin-top: 0.5em;
   }
 }
